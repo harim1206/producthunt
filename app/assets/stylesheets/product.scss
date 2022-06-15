@@ -1,0 +1,260 @@
+.product {
+  $light-grey: #dcdcdc;
+  background: white;
+  padding: 30px;
+
+  h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .box {
+    margin-top: 0;
+  }
+
+  .summary {
+
+    .header {
+      display: flex;
+
+      &__left {
+        flex-basis: 50%;
+
+        .logo {
+          max-width: 100px;
+          padding-bottom: 20px;
+        }
+
+        h1 {
+          font-size: 22px;
+          font-weight: bold; 
+          padding-bottom: 20px;
+        }
+
+        h2 {
+          color: grey;
+          font-weight: 200;
+        }
+
+      }
+
+      &__right {
+        flex-basis: 50%;
+
+        .buttons {
+          align-items: flex-end;
+          justify-content: flex-end;
+          display: flex;
+          height: 100%;
+
+          &__link {
+            border: 1px grey solid;
+            border-radius: 10px;
+            color: black;
+            padding: 15px;
+            text-decoration: none;
+          }
+
+          button {
+            background: #ff6121;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+            padding: 15px 40px;
+          }
+        }
+
+      }
+    }
+
+    .description {
+      line-height: 20px;
+      margin-top: 50px;
+    }
+
+    .user-list {
+      margin-top: 30px;
+      display: flex;
+
+      .user-icon {
+        margin-right: 10px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .comments {
+
+    &__form {
+      border-top: 1px solid $light-grey;
+      border-bottom: 1px solid $light-grey;
+      display: flex;
+      padding: 10px 0;
+
+      .user-icon {
+        margin-right: 10px;
+      }
+
+      input {
+        border: none;
+        flex-grow: 1;
+        margin-right: 10px;
+        padding: 10px;
+      }
+
+      button {
+        background: white;
+        color: black;
+        border: 1px solid $light-grey;
+      }
+    }
+  }
+
+  .comment {
+    display: flex;
+    margin-top: 30px;
+
+    &__user {
+      margin-right: 10px;
+    }
+
+    &__content {
+      flex-grow: 1;
+
+      &__name {
+        font-weight: bold;
+
+        .user-name {
+          color: grey;
+          font-weight: normal;
+        }
+        
+      }
+
+      &__text {
+        color: grey;
+        margin-top: 30px;
+      }
+
+      &__buttons {
+        margin-top: 30px;
+
+        span {
+          color: grey;
+          font-weight: 600;
+          font-size: 12px;
+          margin-right: 10px;
+        }
+      }
+
+    }
+  }
+
+  .stats {
+    margin-top: 50px;
+
+    h2 {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    &__container {
+      display: flex;
+      margin-top: 20px;
+
+    }
+
+    &__group {
+      border-right: 1px solid $light-grey;
+      font-weight: bold;
+      flex-basis: 20%;
+      padding: 20px 0;
+      text-align: center;
+
+      &:last-of-type {
+        border-right: none;
+      }
+
+      &__label {
+        color: grey;
+      }
+
+      &__text {
+        margin-top: 10px;
+      }
+
+    }
+
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      color: grey;
+    }
+  }
+
+  .recirculation {
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+    &__header {
+      display: flex;
+
+      hr {
+        width: 100%;
+        border: none;
+        border-top: 1px solid $light-grey;
+      }
+
+      h2 {
+        font-size: 12px;
+        text-align: center;
+        white-space: nowrap;
+      }
+    }
+
+
+    .recirc-posts {
+      display: flex;
+      margin-top: 30px;
+      padding: 0 30px;
+
+      .recirc-post {
+        flex-basis: 33%;
+        padding-left: 20px;
+        border-right: 1px solid $light-grey;
+
+        &:first-of-type {
+          padding-left: 0;
+        }
+
+        &:last-of-type {
+          border-right: none;
+        }
+
+        
+
+        img {
+          max-width: 50px;
+        }
+
+        &__title {
+          font-weight: bold;
+          margin-top: 10px;
+        }
+
+        &__tagline {
+          color: grey;
+          margin-top: 10px;
+        }
+
+        &__stats {
+          color: grey;
+          font-size: 12px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

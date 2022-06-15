@@ -1,0 +1,11 @@
+.user-icon {
+  max-width: 30px;
+  border-radius: 30px;
+  position: relative;
+
+  svg{
+    position: absolute;
+    left: 7px;
+    top: 20px;
+  }
+}
