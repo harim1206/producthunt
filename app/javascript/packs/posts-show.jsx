@@ -97,6 +97,7 @@ function PostsShow({ postId }) {
   const {post} = data
   const {postsAll} = postsAllData
   
+  // user list icons
   const commenters = post.commenters.map( (user, id) => <UserIcon id={id} src={user.image} userType='commenter' />)
   const voters = post.voters.map( (user, id) => <UserIcon id={id} src={user.image} userType='voter' />)
   const makers = post.makers.map( (user, id) => <UserIcon id={id} src={user.image} userType='maker' />)
