@@ -194,7 +194,7 @@
     }
   }
 
-  .recirculation {
+  .recirc {
     margin-top: 30px;
     margin-bottom: 50px;
 
@@ -215,7 +215,7 @@
     }
 
 
-    .recirc-posts {
+    &__posts {
       display: flex;
       margin-top: 30px;
       padding: 0 30px;
@@ -232,9 +232,7 @@
         &:last-of-type {
           border-right: none;
         }
-
         
-
         img {
           max-width: 50px;
         }

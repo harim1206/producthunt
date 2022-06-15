@@ -134,7 +134,7 @@ function PostsShow({ postId }) {
   ].map(stat => {
     return (
       <div className="stats__group">
-        <p className="stats__group__label">{stat[0]}]</p>
+        <p className="stats__group__label">{stat[0]}</p>
         <p className="stats__group__text">{stat[1]}</p>
       </div>
     )
@@ -214,15 +214,15 @@ function PostsShow({ postId }) {
         </footer>
       </section>
       
-      <section className="recirculation">
-        <div className="recirculation__header">
+      <section className="recirc">
+        <div className="recirc__header">
           <hr/>
           <div className="text">
             <h2>Trending launches</h2>
           </div>
           <hr/>
         </div>
-        <div className="recirc-posts">
+        <div className="recirc__posts">
           {recircPosts}
         </div>
       </section>
