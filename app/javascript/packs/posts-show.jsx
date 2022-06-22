@@ -4,6 +4,8 @@ import { useQuery, useMutation } from 'react-apollo';
 import renderComponent from './utils/renderComponent';
 import UserIcon from './components/UserIcon';
 import {POST_QUERY, POSTS_ALL_QUERY, VOTE_ADD_MUTATION, VOTE_REMOVE_MUTATION, VIEWER_QUERY} from './queries/posts-show-queries'
+import RecirculationPost from './components/RecirculationPost';
+import Comment from './components/Comment';
 
 function PostsShow({ postId }) {
   /*
@@ -70,8 +72,6 @@ function PostsShow({ postId }) {
 
       setHasVote(false)
     }
-    
-    
   }
 
   // On comment form input change
@@ -104,25 +104,7 @@ function PostsShow({ postId }) {
   const userList = [...commenters, ...voters, ...makers]
 
   // post comments
-  const comments = post.comments.map(comment => {
-    return (
-      <li className="comment">
-        <div className="comment__user">
-          <UserIcon src={comment.user.image}/>
-        </div>
-        <div className="comment__content">
-          <p className="comment__content__name">{comment.user.name} <span className="user-name">@{comment.user.username}</span></p>
-          <p className="comment__content__text">{comment.text}</p>
-          <div className="comment__content__buttons">
-            <span>Upvote (23)</span>
-            <span>Reply</span>
-            <span>Share</span>
-            <span>23m</span>
-          </div>
-        </div>
-      </li>
-    )
-  })
+  const comments = post.comments.map(comment => <Comment comment={comment} />)
 
   // post statistics
   const stats = [
@@ -141,19 +123,7 @@ function PostsShow({ postId }) {
   })
 
   // limit recirculation posts to three results
-  const recircPosts = postsAll.slice(0,3).map(post => {
-    return (
-      <div className="recirc-post">
-        <img src={post.image}/>
-        <p className="recirc-post__title">{post.title}</p>
-        <p className="recirc-post__tagline">{post.tagline}</p>
-        <p className="recirc-post__stats">
-          <span className='votes-count'>▲{post.votesCount}</span> • <span className='comments-count'>{post.commentsCount} Comments</span>
-        </p>
-            
-      </div>
-    )
-  })
+  const recircPosts = postsAll.slice(0,3).map(post => <RecirculationPost post={post} />)
 
   return (
     <main className="product">
