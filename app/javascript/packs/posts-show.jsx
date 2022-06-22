@@ -138,7 +138,7 @@ function PostsShow({ postId }) {
             <div className="buttons">
               <a className="buttons__link" href={post.url}>Visit</a>
               <button className="buttons__vote" onClick={onVoteClick}>
-                {
+                <span>▲</span>{
                   hasVote
                   ? `UNVOTE ${post.votesCount}`
                   : `UPVOTE ${post.votesCount}`

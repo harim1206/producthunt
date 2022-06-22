@@ -8,7 +8,7 @@ export default function RecirculationPost({post}) {
       <p className="recirc-post__title">{post.title}</p>
       <p className="recirc-post__tagline">{post.tagline}</p>
       <p className="recirc-post__stats">
-        <span className='votes-count'>▲{post.votesCount}</span> • <span className='comments-count'>{post.commentsCount} Comments</span>
+        ▲{post.votesCount}<span>•</span>{post.commentsCount} Comments
       </p>  
     </div>
   )
