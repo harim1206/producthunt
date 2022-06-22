@@ -14,6 +14,7 @@ const QUERY = gql`
       tagline
       url
       commentsCount
+      votesCount
     }
   }
 `;
@@ -36,7 +37,7 @@ function PostsIndex() {
           </div>
           <div className="tagline">{post.tagline}</div>
           <footer>
-            <button>🔼 0 </button>
+            <button>🔼 {post.votesCount}</button>
             <button>💬 {post.commentsCount}</button>
           </footer>
         </article>

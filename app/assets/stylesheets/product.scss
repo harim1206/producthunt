@@ -21,8 +21,9 @@
         flex-basis: 50%;
 
         .logo {
+          border-radius: 5px;
           max-width: 100px;
-          padding-bottom: 20px;
+          margin-bottom: 20px;
         }
 
         h1 {
@@ -48,21 +49,25 @@
           height: 100%;
 
           &__link {
-            border: 1px grey solid;
-            border-radius: 10px;
+            border: 1px $light-grey solid;
+            border-radius: 5px;
             color: black;
             padding: 15px;
             text-decoration: none;
           }
 
-          button {
+          &__vote {
             background: #ff6121;
             border: none;
-            border-radius: 10px;
+            border-radius: 5px;
             color: white;
             cursor: pointer;
             margin-left: 10px;
             padding: 15px 40px;
+
+            span {
+              padding-right: 10px;
+            }
           }
         }
 
@@ -106,8 +111,11 @@
 
       button {
         background: white;
-        color: black;
         border: 1px solid $light-grey;
+        border-radius: 5px;
+        color: black;
+        font-weight: bold;
+        padding: 10px 15px;
       }
     }
   }
@@ -163,7 +171,7 @@
     &__container {
       display: flex;
       margin-top: 20px;
-
+      margin: 20px -3% 0 -5%;
     }
 
     &__group {
@@ -221,9 +229,11 @@
       padding: 0 30px;
 
       .recirc-post {
-        flex-basis: 33%;
-        padding-left: 20px;
         border-right: 1px solid $light-grey;
+        flex-basis: 33%;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        position: relative;
 
         &:first-of-type {
           padding-left: 0;
@@ -234,6 +244,7 @@
         }
         
         img {
+          border-radius: 5px;
           max-width: 50px;
         }
 
@@ -248,9 +259,14 @@
         }
 
         &__stats {
+          bottom: 5px;
           color: grey;
           font-size: 12px;
           margin-top: 20px;
+          position: absolute;
+          span {
+            padding: 0 5px;
+          }
         }
       }
     }
